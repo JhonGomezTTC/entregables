@@ -1,136 +1,121 @@
+/* Paleta de colores */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #27ae60;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --light-gray: #ecf0f1;
+    --hover-color: #2ecc71;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
 /* General */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
     line-height: 1.6;
 }
 
-h1 {
-    color: #2c3e50;
-    margin-bottom: 10px;
-}
-
 /* Encabezado */
-#about-me {
+header {
     text-align: center;
-    padding: 20px;
-    background-color: #ecf0f1;
-    margin-bottom: 20px;
+    padding: 30px;
+    background-color: var(--light-gray);
+    box-shadow: 0 2px 4px var(--shadow-color);
 }
 
-#about-me h1 {
-    font-size: 2rem;
-}
-
-#about-me img {
-    max-width: 150px;
+header img {
+    max-width: 120px;
     border-radius: 50%;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 /* Enlaces */
-#links {
+nav {
     text-align: center;
-    padding: 10px;
-    background-color: #bdc3c7;
-    margin-bottom: 20px;
+    background-color: var(--primary-color);
+    padding: 10px 0;
 }
 
-#links a {
+nav a {
     text-decoration: none;
-    color: #2980b9;
-    margin: 0 10px;
+    color: white;
+    margin: 0 15px;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-#links a:hover {
-    text-decoration: underline;
-    color: #34495e;
+nav a:hover {
+    color: var(--hover-color);
 }
 
-/* Secciones de listas */
-.hobbies,
-.tasks {
+/* Secciones */
+section {
     padding: 20px;
     margin: 20px auto;
     max-width: 800px;
-    background-color: #ffffff;
+    background-color: white;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px var(--shadow-color);
 }
 
-.hobbies ul,
-.tasks ol {
-    margin: 0;
-    padding: 0 20px;
+/* Listas */
+ul, ol {
+    padding-left: 20px;
 }
 
-.hobbies li,
-.tasks li {
-    margin-bottom: 5px;
+li {
+    margin-bottom: 8px;
 }
 
 /* Tabla */
-.schedule {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.schedule table {
+table {
     width: 100%;
     border-collapse: collapse;
     text-align: center;
+    margin-top: 10px;
 }
 
-.schedule th,
-.schedule td {
+th, td {
     padding: 10px;
     border: 1px solid #ddd;
 }
 
-.schedule th {
-    background-color: #3498db;
+th {
+    background-color: var(--primary-color);
     color: white;
 }
 
-.schedule td {
-    background-color: #f4f4f4;
+td {
+    background-color: var(--light-gray);
 }
 
 /* Formulario */
-.contact-form {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
 }
 
-.contact-form input,
-.contact-form button {
-    display: block;
+form input, form textarea, form button {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
 
-.contact-form button {
-    background-color: #27ae60;
+form button {
+    background-color: var(--secondary-color);
     color: white;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
-    background-color: #2ecc71;
+form button:hover {
+    background-color: var(--hover-color);
 }
